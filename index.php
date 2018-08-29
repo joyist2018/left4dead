@@ -2,9 +2,13 @@
 
 require_once 'SourceQuery.php';
 
-$server = new SourceQuery('178.151.158.39', 27015);
+$server = new SourceQuery('172.81.237.27', 27025);
 $infos  = $server->getInfos();
 $infosTwo = $server->getPlayers();
-echo 'There is ' . $infos['players'] . ' player(s) on the server "' .$infos['name'] .'". Places: '. $infos['places'].' Pass: '.$infos['pass'];
-
+echo '服务器上有 ' . $infos['players'] . ' 名玩家  </br>
+服务器名字: " ' .$infos['name'] .'". </br>
+预留槽: '. $infos['places'].' 
+</br></br>玩家信息: '.$infos['pass'].'</br>
+</br> ';
+echo '</br></br>玩家信息 ' .
 var_dump($infosTwo);
